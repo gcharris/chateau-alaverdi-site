@@ -250,16 +250,18 @@
 
         .terroir-item {
             padding: 2rem;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.35);
             border-radius: 10px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            backdrop-filter: blur(12px);
+            color: #222;
         }
 
         .terroir-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.5);
+            background: rgba(255, 255, 255, 0.45);
         }
 
         .terroir-item h3 {
@@ -378,18 +380,18 @@
 
         .heritage-item {
             padding: 2.5rem;
-            background: rgba(255, 255, 255, 0.75);
-            color: #333;
+            background: rgba(255, 255, 255, 0.35);
+            color: #222;
             border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
             transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(10px);
         }
 
         .heritage-item:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
-            background: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+            background: rgba(255, 255, 255, 0.45);
         }
 
         .heritage-item .icon {
@@ -433,10 +435,11 @@
             font-size: 1.2rem;
             line-height: 1.9;
             padding: 3rem;
-            background: rgba(255, 255, 255, 0.95);
-            color: #333;
+            background: rgba(255, 255, 255, 0.35);
+            color: #222;
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            backdrop-filter: blur(12px);
         }
 
         .cellars-description h3 {
