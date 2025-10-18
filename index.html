@@ -89,8 +89,8 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(101, 31, 41, 0.7), rgba(101, 31, 41, 0.7)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23654942" width="1200" height="800"/><path fill="%23d4af37" opacity="0.1" d="M0 400c100-50 200-30 300-10s200 40 300 20 200-60 300-40 200 50 300 30v400H0z"/></svg>');
+            background: linear-gradient(rgba(101, 31, 41, 0.6), rgba(101, 31, 41, 0.6)), 
+                        url('/images/883b788b-cbb6-4956-b624-39cab75c5851.png');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -124,6 +124,14 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        .wine-bottle {
+            width: 120px;
+            height: 300px;
+            margin: 2rem auto;
+            background: url('/images/883b788b-cbb6-4956-b624-39cab75c5851.png') center/contain no-repeat;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
         }
 
         .cta-button {
@@ -194,9 +202,10 @@
         }
 
         .coat-of-arms .emblem {
-            font-size: 6rem;
-            margin-bottom: 1rem;
-            line-height: 1;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 1rem;
+            background: url('/images/ChatGPT Image Oct 11, 2025, 10_39_07 PM.png') center/contain no-repeat;
         }
 
         .coat-of-arms .year {
@@ -458,6 +467,7 @@
             <h1>CHÂTEAU ALAVERDI</h1>
             <div class="subtitle">1782</div>
             <p class="tagline">Where 8,000 years of Georgian winemaking meets a new generation of elegance</p>
+            <div class="wine-bottle"></div>
             <a href="#wines" class="cta-button">Discover Our Wines</a>
         </div>
     </section>
@@ -474,7 +484,7 @@
                     <p><strong>Our Vision:</strong> To bring the soul of Georgian winemaking to the world — one bottle at a time.</p>
                 </div>
                 <div class="coat-of-arms">
-                    <div class="emblem">🏰</div>
+                    <div class="emblem"></div>
                     <div class="year">1782</div>
                     <p>Kakheti, Georgia</p>
                 </div>
