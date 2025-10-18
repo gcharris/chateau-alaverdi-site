@@ -124,6 +124,22 @@
             margin-right: auto;
         }
 
+        .wine-bottle {
+            width: 150px;
+            height: 300px;
+            margin: 2rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .wine-bottle img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+        }
+
 
         .cta-button {
             background: #d4af37;
@@ -254,6 +270,24 @@
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .wine-label {
+            width: 120px;
+            height: 160px;
+            margin: 0 auto 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+            overflow: hidden;
+            background: white;
+        }
+
+        .wine-label img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
         }
 
 
@@ -491,6 +525,9 @@
             <h1>CHÂTEAU ALAVERDI</h1>
             <div class="subtitle">1782</div>
             <p class="tagline">Where 8,000 years of Georgian winemaking meets a new generation of elegance</p>
+            <div class="wine-bottle">
+                <img src="images/883b788b-cbb6-4956-b624-39cab75c5851.png" alt="Château Alaverdi Wine Bottle" />
+            </div>
             <a href="#wines" class="cta-button">Discover Our Wines</a>
         </div>
     </section>
@@ -546,6 +583,9 @@
             <h2 class="section-title">Our Collection</h2>
             <div class="wine-collection">
                 <div class="wine-card">
+                    <div class="wine-label">
+                        <img src="images/saperavi-label.png" alt="Château Alaverdi Saperavi 1782 Wine Label" />
+                    </div>
                     <h3>Alaverdi Saperavi 1782 — Reserve Red</h3>
                     <div class="wine-details">
                         <strong>Dry Red Wine</strong> | 100% Saperavi | ABV: 13.5–14% | Bottle: 750 ml
@@ -561,6 +601,9 @@
                 </div>
                 
                 <div class="wine-card">
+                    <div class="wine-label">
+                        <img src="images/alaverdi-label.png" alt="Château Alaverdi Rkatsiteli 1782 Wine Label" />
+                    </div>
                     <h3>Alaverdi Rkatsiteli 1782 — Classic White</h3>
                     <div class="wine-details">
                         <strong>Dry White Wine</strong> | 100% Rkatsiteli | ABV: 12.5–13% | Bottle: 750 ml
