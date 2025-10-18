@@ -438,23 +438,38 @@
             color: #651f29;
         }
 
-        .alternative-contact {
+        .primary-contact {
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: #651f29;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .primary-contact .email-link {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .primary-contact .email-link:hover {
+            color: #f5f5dc;
+            text-decoration: underline;
+        }
+
+        .contact-note {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #f5f5dc;
+        }
+
+        .form-section {
             margin-top: 2rem;
             padding: 1.5rem;
             background: #f9f9f9;
             border-radius: 8px;
-            text-align: center;
-        }
-
-        .alternative-contact a {
-            color: #651f29;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .alternative-contact a:hover {
-            color: #d4af37;
-            text-decoration: underline;
         }
 
         /* Footer */
@@ -693,40 +708,46 @@
                 </div>
                 <div class="contact-form">
                     <h3>Get in Touch</h3>
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Company</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <select id="subject" name="subject" required>
-                                <option value="">Select inquiry type</option>
-                                <option value="Export Inquiry">Export Inquiry</option>
-                                <option value="Distribution Partnership">Distribution Partnership</option>
-                                <option value="Wine Tasting Request">Wine Tasting Request</option>
-                                <option value="General Information">General Information</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Please include your country/region and expected order volume if applicable"></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
                     
-                    <!-- Direct contact method -->
-                    <div class="alternative-contact">
-                        <p><strong>Or contact us directly:</strong></p>
-                        <p>📧 <a href="mailto:export@chateaualaverdi.com?subject=Château Alaverdi Export Inquiry">export@chateaualaverdi.com</a></p>
+                    <!-- Direct contact method - Primary -->
+                    <div class="primary-contact">
+                        <p><strong>📧 Contact us directly:</strong></p>
+                        <p><a href="mailto:export@chateaualaverdi.com?subject=Château Alaverdi Export Inquiry" class="email-link">export@chateaualaverdi.com</a></p>
+                        <p class="contact-note">Click the email link above to send us your inquiry directly</p>
+                    </div>
+                    
+                    <!-- Alternative form method -->
+                    <div class="form-section">
+                        <p><strong>Or use the form below:</strong></p>
+                        <form id="contact-form" onsubmit="return false;">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select inquiry type</option>
+                                    <option value="Export Inquiry">Export Inquiry</option>
+                                    <option value="Distribution Partnership">Distribution Partnership</option>
+                                    <option value="Wine Tasting Request">Wine Tasting Request</option>
+                                    <option value="General Information">General Information</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Please include your country/region and expected order volume if applicable"></textarea>
+                            </div>
+                            <button type="button" class="submit-btn" onclick="sendEmail()">Send Message</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -784,14 +805,17 @@
         });
 
         // Contact form handling
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
+        function sendEmail() {
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const company = document.getElementById('company').value;
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
+            
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
             
             // Create email body
             const emailBody = `Name: ${name}
@@ -813,7 +837,7 @@ Sent from Château Alaverdi website`;
             
             // Show success message
             alert('Your email client will open with the message pre-filled. Please send the email to complete your inquiry.');
-        });
+        }
     </script>
 </body>
 </html>
