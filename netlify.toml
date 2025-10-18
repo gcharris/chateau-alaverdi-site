@@ -1,6 +1,5 @@
 [build]
-  command = "npm run build"
-  publish = "dist"
+  publish = "."
 
 # For client-side routing (if you add more pages later)
 [[redirects]]

@@ -1,17 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Château Alaverdi 1782 - Georgian Wine Heritage</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- SEO Meta Tags -->
-    <title>Château Alaverdi 1782 – Kakheti, Georgia | Saperavi & Rkatsiteli</title>
     <meta name="description" content="Experience Georgian wine heritage at Château Alaverdi since 1782. Premium Saperavi and Rkatsiteli wines from Kakheti, Georgia." />
     <meta name="keywords" content="Georgian wine, Saperavi, Rkatsiteli, Kakheti, Château Alaverdi, wine tasting, Georgia wine" />
     
@@ -27,9 +22,626 @@
     <meta name="twitter:title" content="Château Alaverdi 1782 – Kakheti, Georgia" />
     <meta name="twitter:description" content="Experience Georgian wine heritage at Château Alaverdi since 1782. Premium Saperavi and Rkatsiteli wines from Kakheti, Georgia." />
     <meta name="twitter:image" content="/images/og-image.jpg" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(101, 31, 41, 0.95);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #d4af37;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #f5f5dc;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #d4af37;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(101, 31, 41, 0.7), rgba(101, 31, 41, 0.7)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23654942" width="1200" height="800"/><path fill="%23d4af37" opacity="0.1" d="M0 400c100-50 200-30 300-10s200 40 300 20 200-60 300-40 200 50 300 30v400H0z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #d4af37;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #f5f5dc;
+        }
+
+        .hero-content .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #f5f5dc;
+            font-style: italic;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            background: #d4af37;
+            color: #651f29;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background: #f5f5dc;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #651f29;
+        }
+
+        /* Story Section */
+        .story {
+            background: #f5f5dc;
+        }
+
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .story-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .story-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight {
+            color: #651f29;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .coat-of-arms {
+            text-align: center;
+            padding: 2rem;
+            background: #651f29;
+            border-radius: 10px;
+            color: #d4af37;
+        }
+
+        .coat-of-arms .emblem {
+            font-size: 6rem;
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        .coat-of-arms .year {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        /* Wines Section */
+        .wines {
+            background: white;
+        }
+
+        .wine-collection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .wine-card {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .wine-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .wine-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #651f29;
+            margin-bottom: 1rem;
+        }
+
+        .wine-details {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .tasting-notes h4 {
+            color: #651f29;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .tasting-notes p {
+            margin-bottom: 1rem;
+        }
+
+        .pairing {
+            background: #651f29;
+            color: #f5f5dc;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+
+        .pairing h4 {
+            color: #d4af37;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Heritage Section */
+        .heritage {
+            background: #651f29;
+            color: #f5f5dc;
+        }
+
+        .heritage .section-title {
+            color: #d4af37;
+        }
+
+        .heritage-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .heritage-item {
+            padding: 2rem;
+        }
+
+        .heritage-item .icon {
+            font-size: 3rem;
+            color: #d4af37;
+            margin-bottom: 1rem;
+        }
+
+        .heritage-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #d4af37;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #f5f5dc;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            color: #651f29;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #651f29;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Lato', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #d4af37;
+        }
+
+        .submit-btn {
+            background: #651f29;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #d4af37;
+            color: #651f29;
+        }
+
+        /* Footer */
+        footer {
+            background: #651f29;
+            color: #f5f5dc;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        footer .logo {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-content .tagline {
+                font-size: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .story-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .wine-collection {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">CHÂTEAU ALAVERDI 1782</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#wines">Wines</a></li>
+                <li><a href="#heritage">Heritage</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>CHÂTEAU ALAVERDI</h1>
+            <div class="subtitle">1782</div>
+            <p class="tagline">Where 8,000 years of Georgian winemaking meets a new generation of elegance</p>
+            <a href="#wines" class="cta-button">Discover Our Wines</a>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="story">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <div class="story-content">
+                <div class="story-text">
+                    <p>For <span class="highlight">8,000 years, Georgia has been the cradle of wine.</span></p>
+                    <p>Château Alaverdi 1782 carries this timeless heritage forward with a modern, château-level approach. Named in homage to the restoration year of the sacred Alaverdi Monastery, each bottle expresses the land, the light, and the centuries of devotion that define Georgian wine.</p>
+                    <p>At Château Alaverdi 1782, we unite the spiritual depth of Georgia's winemaking tradition with the refinement of European craftsmanship. Every drop is a celebration of authenticity, elegance, and soul.</p>
+                    <p><strong>Our Vision:</strong> To bring the soul of Georgian winemaking to the world — one bottle at a time.</p>
+                </div>
+                <div class="coat-of-arms">
+                    <div class="emblem">🏰</div>
+                    <div class="year">1782</div>
+                    <p>Kakheti, Georgia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wines Section -->
+    <section id="wines" class="wines">
+        <div class="container">
+            <h2 class="section-title">Our Collection</h2>
+            <div class="wine-collection">
+                <div class="wine-card">
+                    <h3>Alaverdi Saperavi 1782</h3>
+                    <div class="wine-details">
+                        <strong>Reserve Red</strong> | 100% Saperavi | ABV: 13.5–14% | 750ml
+                    </div>
+                    <div class="tasting-notes">
+                        <h4>Tasting Notes</h4>
+                        <p>Deep ruby-garnet color. Aromas of black cherry, plum and graphite. Rich, structured palate with elegant tannin, cedar spice and a long mineral finish. Oak-aged 12–18 months.</p>
+                    </div>
+                    <div class="pairing">
+                        <h4>Perfect Pairings</h4>
+                        <p>Roasted lamb, aged cheeses, and dark chocolate desserts.</p>
+                    </div>
+                </div>
+                
+                <div class="wine-card">
+                    <h3>Alaverdi Rkatsiteli 1782</h3>
+                    <div class="wine-details">
+                        <strong>Classic White</strong> | 100% Rkatsiteli | ABV: 12.5–13% | 750ml
+                    </div>
+                    <div class="tasting-notes">
+                        <h4>Tasting Notes</h4>
+                        <p>Golden amber hue. Fragrant notes of pear, quince, and wild honey. Textured, layered, and elegant with vibrant acidity. Long, savoury finish.</p>
+                    </div>
+                    <div class="pairing">
+                        <h4>Perfect Pairings</h4>
+                        <p>Grilled fish, spice-forward vegetable dishes, and light poultry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heritage Section -->
+    <section id="heritage" class="heritage">
+        <div class="container">
+            <h2 class="section-title">Georgian Heritage</h2>
+            <div class="heritage-content">
+                <div class="heritage-item">
+                    <div class="icon">🍇</div>
+                    <h3>Ancient Terroir</h3>
+                    <p>Kakheti's sunlit valleys and mineral-rich soils have nurtured vines for millennia, creating wines of exceptional character and complexity.</p>
+                </div>
+                <div class="heritage-item">
+                    <div class="icon">🏺</div>
+                    <h3>Qvevri Tradition</h3>
+                    <p>We honor the ancient qvevri fermentation method, recognized by UNESCO, blending it with contemporary cellar precision.</p>
+                </div>
+                <div class="heritage-item">
+                    <div class="icon">🏛️</div>
+                    <h3>Monastic Legacy</h3>
+                    <p>Named after the 1782 restoration of Alaverdi Monastery, our wines embody centuries of spiritual devotion to the craft.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Export & Distribution</h3>
+                    <p><strong>Export Inquiries:</strong> export@chateaualaverdi.ge</p>
+                    <p><strong>Commercial:</strong> kristina@chateaualaverdi.ge</p>
+                    <p><strong>Phone:</strong> +995 XXX XXX XXX</p>
+                    <br>
+                    <h3>Visit Our Winery</h3>
+                    <p>Kakheti, Georgia</p>
+                    <p>Vineyard and winery visits by appointment</p>
+                    <br>
+                    <h3>Current Markets</h3>
+                    <p>Georgia • Armenia • Russia • China</p>
+                    <p>Expanding to Central Asia & Middle East</p>
+                </div>
+                <div class="contact-form">
+                    <h3>Get in Touch</h3>
+                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="contact" />
+                        <div class="hidden">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo">CHÂTEAU ALAVERDI 1782</div>
+            <p>Georgia's winemaking soul — refined for the world</p>
+            <p>&copy; 2024 Château Alaverdi 1782. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(101, 31, 41, 0.98)';
+            } else {
+                header.style.background = 'rgba(101, 31, 41, 0.95)';
+            }
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.wine-card, .heritage-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
 </html>
