@@ -356,12 +356,17 @@
 
         /* Heritage Section */
         .heritage {
-            background: #651f29;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(101, 31, 41, 0.7)), url('photos/monastery-heritage.png') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
             color: #f5f5dc;
+            padding: 5rem 0;
         }
 
         .heritage .section-title {
             color: #d4af37;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+            font-size: 2.5rem;
         }
 
         .heritage-content {
@@ -372,25 +377,94 @@
         }
 
         .heritage-item {
-            padding: 2rem;
+            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .heritage-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
         }
 
         .heritage-item .icon {
-            font-size: 3rem;
-            color: #d4af37;
+            font-size: 3.5rem;
+            color: #651f29;
             margin-bottom: 1rem;
         }
 
         .heritage-item h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 1rem;
+            color: #651f29;
+        }
+
+        .heritage-item p {
+            line-height: 1.8;
+            color: #444;
+        }
+
+        /* Our Cellars Section */
+        .our-cellars {
+            background: linear-gradient(rgba(101, 31, 41, 0.8), rgba(0, 0, 0, 0.85)), url('photos/barrel-cellar.png') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #f5f5dc;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .our-cellars .section-title {
             color: #d4af37;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .cellars-description {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.9;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .cellars-description h3 {
+            font-family: 'Playfair Display', serif;
+            color: #651f29;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cellars-description p {
+            margin-bottom: 1rem;
         }
 
         /* Contact Section */
         .contact {
-            background: #f5f5dc;
+            background: linear-gradient(135deg, #f5f5dc 0%, #ffffff 50%, #f5f5dc 100%);
+            position: relative;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: url('photos/abstract-wine-bg.png') no-repeat center center;
+            background-size: contain;
+            opacity: 0.15;
+            pointer-events: none;
         }
 
         .contact-content {
@@ -573,6 +647,7 @@
                 <li><a href="#terroir">Terroir</a></li>
                 <li><a href="#wines">Wines</a></li>
                 <li><a href="#heritage">Heritage</a></li>
+                <li><a href="#cellars">Cellars</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -603,7 +678,7 @@
                     <p><strong>Our Vision:</strong> To bring the soul of Georgian winemaking to the world — one bottle at a time. To create a globally recognized Georgian wine brand that honors tradition, delivers exceptional quality, and builds lasting emotional connections with wine lovers everywhere.</p>
                 </div>
                 <div class="story-image">
-                    <img src="photos/wine-pour-red-closeup.png" alt="Château Alaverdi Saperavi Wine Pour" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);" />
+                    <img src="photos/grape-harvest.png" alt="Hand-harvesting Saperavi grapes at Château Alaverdi" style="width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);" />
                 </div>
             </div>
         </div>
@@ -630,6 +705,10 @@
                     <h3>Philosophy</h3>
                     <p>Minimal intervention. Maximum expression. True Georgian soul.</p>
                 </div>
+            </div>
+            <div class="qvevri-showcase" style="text-align: center; margin-top: 3rem;">
+                <img src="photos/qvevri-cellar.png" alt="Traditional Georgian Qvevri Clay Vessels" style="max-width: 600px; width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.6);" />
+                <p style="margin-top: 1rem; font-style: italic; color: #f5f5dc;">Ancient qvevri vessels — UNESCO-recognized winemaking heritage</p>
             </div>
         </div>
     </section>
@@ -675,6 +754,19 @@
                     </div>
                 </div>
             </div>
+            <div class="wine-experience" style="text-align: center; margin-top: 4rem; padding: 3rem; background: #f9f9f9; border-radius: 10px;">
+                <h3 style="font-family: 'Playfair Display', serif; color: #651f29; font-size: 2rem; margin-bottom: 2rem;">The Tasting Experience</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                    <div>
+                        <img src="photos/wine-glass-setup.png" alt="Château Alaverdi Rkatsiteli White Wine" style="width: 100%; max-width: 300px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);" />
+                        <p style="margin-top: 1rem; color: #666; font-style: italic;">Golden amber Rkatsiteli — a taste of Georgian sunshine</p>
+                    </div>
+                    <div>
+                        <img src="photos/wine-pour-red-closeup.png" alt="Saperavi Wine Pour" style="width: 100%; max-width: 300px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);" />
+                        <p style="margin-top: 1rem; color: #666; font-style: italic;">Deep ruby Saperavi — the soul of Georgian winemaking</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -698,6 +790,19 @@
                     <h3>Monastic Legacy</h3>
                     <p>Named after the 1782 restoration of Alaverdi Monastery, our wines embody centuries of spiritual devotion to the craft.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Cellars Section -->
+    <section id="cellars" class="our-cellars">
+        <div class="container">
+            <h2 class="section-title">Our Cellars</h2>
+            <div class="cellars-description">
+                <h3>Where Tradition Meets European Craftsmanship</h3>
+                <p>Our state-of-the-art cellars blend the ancient Georgian qvevri tradition with modern European barrel aging techniques. Each wine undergoes meticulous care in temperature-controlled environments, ensuring optimal development.</p>
+                <p>Premium French and Georgian oak barrels impart subtle complexity while preserving the authentic character of our Saperavi and Rkatsiteli grapes. From vine to bottle, every step reflects our commitment to excellence.</p>
+                <p><strong>Aging:</strong> 12-18 months in carefully selected oak | <strong>Climate:</strong> Naturally cool cellars | <strong>Philosophy:</strong> Patient craftsmanship</p>
             </div>
         </div>
     </section>
