@@ -299,20 +299,24 @@
         }
 
         .wine-label {
-            width: 120px;
-            height: 160px;
-            margin: 0 auto 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-            overflow: hidden;
-            background: white;
+            width: 100%;
+            max-width: 280px;
+            height: 380px;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: linear-gradient(180deg, rgba(245,245,245,0.3) 0%, rgba(0,0,0,0.05) 100%);
+            padding: 1.5rem;
         }
 
         .wine-label img {
-            width: 100%;
-            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
             object-fit: contain;
             display: block;
+            filter: drop-shadow(0 10px 25px rgba(0,0,0,0.25));
         }
 
 
