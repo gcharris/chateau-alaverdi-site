@@ -438,6 +438,25 @@
             color: #651f29;
         }
 
+        .alternative-contact {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .alternative-contact a {
+            color: #651f29;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .alternative-contact a:hover {
+            color: #d4af37;
+            text-decoration: underline;
+        }
+
         /* Footer */
         footer {
             background: #651f29;
@@ -674,7 +693,7 @@
                 </div>
                 <div class="contact-form">
                     <h3>Get in Touch</h3>
-                    <form action="https://formspree.io/f/xpwnqkqg" method="POST">
+                    <form action="https://formspree.io/f/xpwnqkqg" method="POST" id="contact-form">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
@@ -705,6 +724,12 @@
                         <input type="hidden" name="_subject" value="New Château Alaverdi Inquiry">
                         <button type="submit" class="submit-btn">Send Message</button>
                     </form>
+                    
+                    <!-- Alternative contact method -->
+                    <div class="alternative-contact">
+                        <p><strong>Or contact us directly:</strong></p>
+                        <p>📧 <a href="mailto:export@chateaualaverdi.com?subject=Château Alaverdi Export Inquiry">export@chateaualaverdi.com</a></p>
+                    </div>
                 </div>
             </div>
         </div>
