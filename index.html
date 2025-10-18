@@ -693,7 +693,7 @@
                 </div>
                 <div class="contact-form">
                     <h3>Get in Touch</h3>
-                    <form action="https://formspree.io/f/xpwnqkqg" method="POST" id="contact-form">
+                    <form id="contact-form">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
@@ -720,12 +720,10 @@
                             <label for="message">Message</label>
                             <textarea id="message" name="message" rows="5" required placeholder="Please include your country/region and expected order volume if applicable"></textarea>
                         </div>
-                        <input type="hidden" name="_replyto" value="export@chateaualaverdi.com">
-                        <input type="hidden" name="_subject" value="New Château Alaverdi Inquiry">
                         <button type="submit" class="submit-btn">Send Message</button>
                     </form>
                     
-                    <!-- Alternative contact method -->
+                    <!-- Direct contact method -->
                     <div class="alternative-contact">
                         <p><strong>Or contact us directly:</strong></p>
                         <p>📧 <a href="mailto:export@chateaualaverdi.com?subject=Château Alaverdi Export Inquiry">export@chateaualaverdi.com</a></p>
@@ -784,6 +782,38 @@
         document.querySelectorAll('.wine-card, .heritage-item').forEach(el => {
             observer.observe(el);
         });
+
+        // Contact form handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const company = document.getElementById('company').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Create email body
+            const emailBody = `Name: ${name}
+Email: ${email}
+Company: ${company || 'Not provided'}
+Subject: ${subject}
+
+Message:
+${message}
+
+---
+Sent from Château Alaverdi website`;
+            
+            // Create mailto link
+            const mailtoLink = `mailto:export@chateaualaverdi.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            alert('Your email client will open with the message pre-filled. Please send the email to complete your inquiry.');
+        });
     </script>
-  </body>
+</body>
 </html>
