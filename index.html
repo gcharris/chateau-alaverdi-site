@@ -118,23 +118,34 @@
             height: 100vh;
             background: linear-gradient(rgba(101, 31, 41, 0.4), rgba(101, 31, 41, 0.6)), url('photos/hero-vineyard.png') no-repeat center center;
             background-size: cover;
-            background-attachment: fixed;
+            background-attachment: scroll;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: white;
+            color: white !important;
             position: relative;
+            overflow: hidden;
+        }
+        
+        /* Fix for Chrome on Windows */
+        @supports (-webkit-appearance:none) {
+            .hero {
+                background-attachment: scroll;
+            }
         }
 
         .hero-content {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
-            z-index: 10;
+            z-index: 100;
             position: relative;
-            display: block;
-            visibility: visible;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            transform: translateZ(0);
+            will-change: transform;
         }
 
         .hero-content h1 {
@@ -145,10 +156,15 @@
             color: #ffffff !important;
             text-shadow: 3px 3px 10px rgba(0,0,0,0.8), 0 0 30px rgba(101, 31, 41, 0.6);
             letter-spacing: 3px;
-            display: block;
-            visibility: visible;
-            opacity: 1;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
             line-height: 1.2;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            transform: translateZ(0);
+            backface-visibility: hidden;
         }
 
         .hero-content .subtitle {
