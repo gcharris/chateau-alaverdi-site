@@ -51,8 +51,12 @@
             position: fixed;
             width: 100%;
             top: 0;
-            z-index: 1000;
+            left: 0;
+            right: 0;
+            z-index: 9999;
             transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            min-height: 60px;
         }
 
         nav {
@@ -60,6 +64,9 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
         }
 
         .logo {
@@ -69,6 +76,8 @@
             font-weight: 600;
             text-decoration: none;
             letter-spacing: 2px;
+            display: inline-block;
+            white-space: nowrap;
         }
         
         .logo .year {
@@ -81,6 +90,14 @@
             display: flex;
             list-style: none;
             gap: 2rem;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin: 0;
         }
 
         .nav-links a {
@@ -88,6 +105,8 @@
             text-decoration: none;
             font-weight: 400;
             transition: color 0.3s ease;
+            display: inline-block;
+            padding: 0.5rem 0;
         }
 
         .nav-links a:hover {
