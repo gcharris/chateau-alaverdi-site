@@ -153,8 +153,8 @@ Add a professional export section for B2B customers. Place this before the foote
     
     <div class="contact-commercial">
       <h3>Commercial Contacts</h3>
-      <p><strong>Export Inquiries:</strong> <a href="mailto:export@chateaualaverdi.ge">export@chateaualaverdi.ge</a></p>
-      <p><strong>Commercial:</strong> <a href="mailto:kristina@chateaualaverdi.ge">kristina@chateaualaverdi.ge</a></p>
+      <p><strong>Export Inquiries:</strong> <a href="mailto:export@chateaualaverdi.com">export@chateaualaverdi.com</a></p>
+      <p><strong>Commercial:</strong> <a href="mailto:kristina@chateaualaverdi.com">kristina@chateaualaverdi.com</a></p>
       <p><strong>Winery Visits:</strong> By appointment</p>
     </div>
   </div>

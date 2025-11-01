@@ -110,7 +110,7 @@ Wrap up your thoughts...
 
 ---
 
-*For more information, contact us at export@chateaualaverdi.ge*
+*For more information, contact us at export@chateaualaverdi.com*
 ```
 
 ---
