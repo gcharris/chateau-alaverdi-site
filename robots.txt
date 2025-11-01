@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gcharris.github.io/chateau-alaverdi-site/sitemap.xml
+Sitemap: https://chateaualaverdi.com/sitemap.xml
+
