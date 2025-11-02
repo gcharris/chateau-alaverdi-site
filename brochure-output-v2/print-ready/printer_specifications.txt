@@ -1,0 +1,35 @@
+PROFESSIONAL PRINTING SPECIFICATIONS
+=====================================
+
+GENERAL REQUIREMENTS:
+- Color Mode: CMYK (4-color process)
+- Resolution: 300 DPI minimum
+- File Format: PDF/X-1a or High Quality Print PDF
+- Fonts: All fonts embedded
+- Images: 300 DPI, CMYK color space
+
+BLEED AND MARGINS:
+- Bleed: 0.125" (3mm) on all sides
+- Safe Area: 0.25" (6mm) from trim edge
+- Fold Lines: Scored before folding for clean creases
+
+PAPER RECOMMENDATIONS:
+- Tri-fold Brochure: 100-120 GSM coated paper (gloss or matte)
+- Bi-fold Brochure: 150-200 GSM coated paper for premium feel
+- Single Sheet: 120-150 GSM coated paper
+
+FINISHING OPTIONS:
+- UV Coating: Recommended for durability and professional appearance
+- Folding: Machine folding with scoring for sharp creases
+- Quantities: 250+ for best per-unit pricing
+
+QUALITY CONTROL:
+- Request proof print before full run
+- Check color accuracy against brand standards
+- Verify all text is readable and properly aligned
+- Ensure contact information is accurate
+
+DELIVERY NOTES:
+- Allow 3-5 business days for printing
+- Request extra copies (10% overage) for events
+- Consider rush options if needed for tight deadlines
