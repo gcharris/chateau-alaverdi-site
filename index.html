@@ -1066,5 +1066,197 @@ Sent from Château Alaverdi website`;
             alert('Your email client will open with the message pre-filled. Please send the email to complete your inquiry.');
         }
     </script>
+
+    <!-- Structured Data for AI and Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Winery",
+      "name": "Château Alaverdi 1782",
+      "description": "Premium Georgian wines from Château Alaverdi 1782. Traditional qvevri Saperavi and Rkatsiteli wines from Kakheti. 8,000 years of winemaking heritage.",
+      "url": "https://chateaualaverdi.com",
+      "logo": "https://chateaualaverdi.com/photos/bottle-saperavi-new.png",
+      "image": "https://chateaualaverdi.com/photos/monastery-heritage.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Kakheti",
+        "addressCountry": "GE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "41.6",
+        "longitude": "45.7"
+      },
+      "telephone": "+995555345542",
+      "email": "export@chateaualaverdi.com",
+      "sameAs": [],
+      "foundingDate": "1782",
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Alaverdi Saperavi 1782 - Reserve Red",
+            "description": "Dry Red Wine. 100% Saperavi. ABV: 13.5-14%. Deep ruby-garnet. Aromas of black cherry, plum and graphite. Rich, structured palate with elegant tannin, cedar spice and a long mineral finish. Oak-aged 12-18 months.",
+            "image": "https://chateaualaverdi.com/photos/bottle-saperavi-new.png",
+            "brand": {
+              "@type": "Brand",
+              "name": "Château Alaverdi 1782"
+            },
+            "category": "Wine",
+            "alcohol": {
+              "@type": "QuantitativeValue",
+              "value": "13.5-14",
+              "unitCode": "P1"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Wine Type",
+                "value": "Red Wine"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Grape Variety",
+                "value": "100% Saperavi"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Region",
+                "value": "Kakheti, Georgia"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Aging",
+                "value": "Oak-aged 12-18 months"
+              }
+            ]
+          },
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "priceCurrency": "USD",
+            "minPrice": "15",
+            "maxPrice": "30"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Alaverdi Rkatsiteli 1782 - Classic White",
+            "description": "Dry White Wine. 100% Rkatsiteli. ABV: 12.5-13%. Golden amber hue. Fragrant notes of pear, quince, and wild honey. Textured, layered, and elegant with a vibrant acidity.",
+            "image": "https://chateaualaverdi.com/photos/bottle-rkatsiteli-new.png",
+            "brand": {
+              "@type": "Brand",
+              "name": "Château Alaverdi 1782"
+            },
+            "category": "Wine",
+            "alcohol": {
+              "@type": "QuantitativeValue",
+              "value": "12.5-13",
+              "unitCode": "P1"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Wine Type",
+                "value": "White Wine"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Grape Variety",
+                "value": "100% Rkatsiteli"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Region",
+                "value": "Kakheti, Georgia"
+              }
+            ]
+          },
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "priceCurrency": "USD",
+            "minPrice": "12",
+            "maxPrice": "25"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Organization Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Château Alaverdi 1782",
+      "url": "https://chateaualaverdi.com",
+      "logo": "https://chateaualaverdi.com/photos/bottle-saperavi-new.png",
+      "description": "Premium Georgian winery producing traditional qvevri wines. 8,000 years of Georgian winemaking heritage.",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+995555345542",
+          "contactType": "Export Inquiries",
+          "email": "export@chateaualaverdi.com",
+          "areaServed": ["GE", "AM", "RU", "CN", "AE"],
+          "availableLanguage": ["English", "Russian", "Chinese"]
+        },
+        {
+          "@type": "ContactPoint",
+          "email": "kristina@chateaualaverdi.com",
+          "contactType": "Commercial & Distribution"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Kakheti",
+        "addressCountry": "GE"
+      }
+    }
+    </script>
+
+    <!-- BreadcrumbList for Navigation -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://chateaualaverdi.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Our Story",
+          "item": "https://chateaualaverdi.com/#story"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Our Wines",
+          "item": "https://chateaualaverdi.com/#wines"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Heritage",
+          "item": "https://chateaualaverdi.com/#heritage"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Contact",
+          "item": "https://chateaualaverdi.com/#contact"
+        }
+      ]
+    }
+    </script>
   </body>
 </html>
