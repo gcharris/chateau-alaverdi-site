@@ -368,37 +368,39 @@
             padding: 5rem 0;
         }
 
+        /* Compact 3-up collection grid (scales gracefully to 7 wines) */
         .wine-collection {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.75rem;
             margin-top: 3rem;
         }
 
         .wine-card {
+            flex: 1 1 300px;
+            max-width: 340px;
             background: #ffffff;
-            padding: 2rem;
+            padding: 1.75rem 1.5rem;
             border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            border: 1px solid #e5e5e5;
-            transition: transform 0.3s ease;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+            border: 1px solid rgba(212, 175, 55, 0.18);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
-            border: 1px solid rgba(212, 175, 55, 0.1);
             display: flex;
             flex-direction: column;
         }
 
         .wine-label {
             width: 100%;
-            max-width: 280px;
-            height: 380px;
-            margin: 0 auto 2rem;
+            height: 240px;
+            margin: 0 auto 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 10px;
+            border-radius: 8px;
             background: linear-gradient(180deg, rgba(245,245,245,0.3) 0%, rgba(0,0,0,0.05) 100%);
-            padding: 1.5rem;
+            padding: 1rem;
         }
 
         .wine-label img {
@@ -408,45 +410,61 @@
             display: block;
         }
 
-
         .wine-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
+            box-shadow: 0 14px 34px rgba(101,31,41,0.14);
         }
 
         .wine-card h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             color: #651f29;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
         }
 
         .wine-details {
-            margin-bottom: 1.5rem;
-            font-size: 0.9rem;
-            color: #666;
+            margin-bottom: 1.25rem;
+            font-size: 0.82rem;
+            color: #777;
+            line-height: 1.5;
         }
 
         .tasting-notes h4 {
             color: #651f29;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
             font-weight: 500;
+            font-size: 0.95rem;
         }
 
         .tasting-notes p {
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
+            font-size: 0.88rem;
+            line-height: 1.55;
+            color: #555;
         }
 
         .pairing {
             background: #651f29;
             color: #f5f5dc;
-            padding: 1rem;
-            border-radius: 5px;
+            padding: 0.85rem 1rem;
+            border-radius: 6px;
             margin-top: auto;
+            min-height: 7.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .pairing h4 {
             color: #d4af37;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.35rem;
+            font-size: 0.9rem;
+        }
+
+        .pairing p {
+            font-size: 0.85rem;
+            line-height: 1.5;
         }
 
         /* Heritage Section */
@@ -700,7 +718,12 @@
             }
 
             .wine-collection {
-                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+
+            .wine-card {
+                flex-basis: 100%;
+                max-width: 420px;
             }
 
             .section-title {
@@ -805,37 +828,127 @@
             <div class="wine-collection">
                 <div class="wine-card">
                     <div class="wine-label">
-                        <img src="photos/bottle-saperavi-new.png" alt="Château Alaverdi Saperavi Wine Bottle" style="max-width: 250px; height: auto; margin: 0 auto;" />
+                        <img src="photos/bottle-saperavi-new.png" alt="Château Alaverdi Saperavi — Dry Red Wine" />
                     </div>
-                    <h3>Saperavi — Reserve Red</h3>
+                    <h3>Saperavi — Dry Red</h3>
                     <div class="wine-details">
-                        <strong>Dry Red Wine</strong> | 100% Saperavi | ABV: 13.5–14% | Bottle: 750 ml
+                        <strong>Dry Red</strong> | 100% Saperavi | ABV: 13% | Bottle: 750 ml
                     </div>
                     <div class="tasting-notes">
                         <h4>Tasting Notes</h4>
-                        <p>Deep ruby-garnet. Aromas of black cherry, plum and graphite. Rich, structured palate with elegant tannin, cedar spice and a long mineral finish. Oak-aged 12–18 months.</p>
+                        <p>Deep ruby. A complex bouquet of dark berries opens to a smooth, rounded palate with lively acidity and a long finish. Kakheti fruit, fermented in stainless steel.</p>
                     </div>
                     <div class="pairing">
                         <h4>Pairing Suggestions</h4>
-                        <p>Perfect with roasted lamb, aged cheeses, and dark chocolate desserts.</p>
+                        <p>Perfect with grilled meats, hearty pasta, and vegetable stews.</p>
                     </div>
                 </div>
-                
+
                 <div class="wine-card">
                     <div class="wine-label">
-                        <img src="photos/bottle-rkatsiteli-new.png" alt="Château Alaverdi Rkatsiteli Wine Bottle" style="max-width: 250px; height: auto; margin: 0 auto;" />
+                        <img src="photos/bottle-kindzmarauli.png" alt="Château Alaverdi Kindzmarauli — Semi-Sweet Red Wine" />
                     </div>
-                    <h3>Rkatsiteli — Classic White</h3>
+                    <h3>Kindzmarauli — Semi-Sweet Red</h3>
                     <div class="wine-details">
-                        <strong>Dry White Wine</strong> | 100% Rkatsiteli | ABV: 12.5–13% | Bottle: 750 ml
+                        <strong>Semi-Sweet Red</strong> | 100% Saperavi · Kindzmarauli PDO | ABV: 12% | Bottle: 750 ml
                     </div>
                     <div class="tasting-notes">
                         <h4>Tasting Notes</h4>
-                        <p>Golden amber hue. Fragrant notes of pear, quince, and wild honey. Textured, layered, and elegant with a vibrant acidity. Long, savoury finish.</p>
+                        <p>Deep violet hue. Soft, varietal aromas lead to a smooth, velvety palate, its natural sweetness balanced by fresh acidity.</p>
                     </div>
                     <div class="pairing">
                         <h4>Pairing Suggestions</h4>
-                        <p>Ideal with grilled fish, spice-forward vegetable dishes, and light poultry.</p>
+                        <p>Beautiful with chocolate desserts, ripe berries, and soft blue cheeses.</p>
+                    </div>
+                </div>
+
+                <div class="wine-card">
+                    <div class="wine-label">
+                        <img src="photos/bottle-alazani-red.png" alt="Château Alaverdi Alazani — Semi-Sweet Red Wine" />
+                    </div>
+                    <h3>Alazani — Semi-Sweet Red</h3>
+                    <div class="wine-details">
+                        <strong>Semi-Sweet Red</strong> | 100% Saperavi | ABV: 11% | Bottle: 750 ml
+                    </div>
+                    <div class="tasting-notes">
+                        <h4>Tasting Notes</h4>
+                        <p>Bright crimson. Generous aromas of cherry and blackberry give way to a velvety, gently sweet, lingering palate.</p>
+                    </div>
+                    <div class="pairing">
+                        <h4>Pairing Suggestions</h4>
+                        <p>Lovely with desserts, fresh berries, and mild cheeses.</p>
+                    </div>
+                </div>
+
+                <div class="wine-card">
+                    <div class="wine-label">
+                        <img src="photos/bottle-rkatsiteli-new.png" alt="Château Alaverdi Rkatsiteli — Dry White Wine" />
+                    </div>
+                    <h3>Rkatsiteli — Dry White</h3>
+                    <div class="wine-details">
+                        <strong>Dry White</strong> | 100% Rkatsiteli | ABV: 12.5% | Bottle: 750 ml
+                    </div>
+                    <div class="tasting-notes">
+                        <h4>Tasting Notes</h4>
+                        <p>Pale straw. Delicate aromas of white flowers and citrus, with a crisp, refreshing palate and a clean finish. Fermented in stainless steel.</p>
+                    </div>
+                    <div class="pairing">
+                        <h4>Pairing Suggestions</h4>
+                        <p>Ideal with grilled fish, fresh salads, and light poultry.</p>
+                    </div>
+                </div>
+
+                <div class="wine-card">
+                    <div class="wine-label">
+                        <img src="photos/bottle-manavi.png" alt="Château Alaverdi Manavi — Dry White Wine" />
+                    </div>
+                    <h3>Manavi — Dry White</h3>
+                    <div class="wine-details">
+                        <strong>Dry White</strong> | 100% Kakhuri Mtsvane · Manavi PDO | ABV: 12.5% | Bottle: 750 ml
+                    </div>
+                    <div class="tasting-notes">
+                        <h4>Tasting Notes</h4>
+                        <p>Pale straw hue. A fruity bouquet of apple, pear and tropical fruit, with a soft, well-balanced palate.</p>
+                    </div>
+                    <div class="pairing">
+                        <h4>Pairing Suggestions</h4>
+                        <p>Pairs beautifully with fresh salads, light appetizers, and fish.</p>
+                    </div>
+                </div>
+
+                <div class="wine-card">
+                    <div class="wine-label">
+                        <img src="photos/bottle-tvishi.png" alt="Château Alaverdi Tvishi — Semi-Sweet White Wine" />
+                    </div>
+                    <h3>Tvishi — Semi-Sweet White</h3>
+                    <div class="wine-details">
+                        <strong>Semi-Sweet White</strong> | 100% Tsolikouri · Tvishi PDO | ABV: 11.5% | Bottle: 750 ml
+                    </div>
+                    <div class="tasting-notes">
+                        <h4>Tasting Notes</h4>
+                        <p>Bright tropical-fruit aromatics with a graceful balance of sweetness and crisp acidity. Light, elegant and refreshing.</p>
+                    </div>
+                    <div class="pairing">
+                        <h4>Pairing Suggestions</h4>
+                        <p>Ideal with spicy Asian cuisine, fruit desserts, and soft cheeses.</p>
+                    </div>
+                </div>
+
+                <div class="wine-card">
+                    <div class="wine-label">
+                        <img src="photos/bottle-alazani-white.png" alt="Château Alaverdi Alazani — Semi-Sweet White Wine" />
+                    </div>
+                    <h3>Alazani — Semi-Sweet White</h3>
+                    <div class="wine-details">
+                        <strong>Semi-Sweet White</strong> | Rkatsiteli & Mtsvane | ABV: 12% | Bottle: 750 ml
+                    </div>
+                    <div class="tasting-notes">
+                        <h4>Tasting Notes</h4>
+                        <p>Pale straw. Distinct peach and orchard-fruit notes carry through to a smooth, velvety, long finish.</p>
+                    </div>
+                    <div class="pairing">
+                        <h4>Pairing Suggestions</h4>
+                        <p>Perfect with fruit tarts, light desserts, and soft cheeses.</p>
                     </div>
                 </div>
             </div>
@@ -843,12 +956,12 @@
                 <h3 style="font-family: 'Playfair Display', serif; color: #651f29; font-size: 2rem; margin-bottom: 2rem;">The Tasting Experience</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
                     <div>
-                        <img src="photos/white-wine-glass.png" alt="Château Alaverdi Rkatsiteli White Wine" style="width: 100%; max-width: 300px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);" />
-                        <p style="margin-top: 1rem; color: #666; font-style: italic;">Golden amber Rkatsiteli — a taste of Georgian sunshine</p>
+                        <img src="photos/white-wine-glass.png" alt="Château Alaverdi white wines" style="width: 100%; max-width: 300px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);" />
+                        <p style="margin-top: 1rem; color: #666; font-style: italic;">Our white wines — bright, aromatic, and full of Georgian sunshine</p>
                     </div>
                     <div>
-                        <img src="photos/red-wine-glass.png" alt="Saperavi Wine Glass" style="width: 100%; max-width: 300px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);" />
-                        <p style="margin-top: 1rem; color: #666; font-style: italic;">Deep ruby Saperavi — the soul of Georgian winemaking</p>
+                        <img src="photos/red-wine-glass.png" alt="Château Alaverdi red wines" style="width: 100%; max-width: 300px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);" />
+                        <p style="margin-top: 1rem; color: #666; font-style: italic;">Our red wines — deep, structured, and full of Georgian soul</p>
                     </div>
                 </div>
             </div>
